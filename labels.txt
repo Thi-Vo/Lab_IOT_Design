@@ -1,0 +1,3 @@
+Glass
+NoGlass
+Undetected
