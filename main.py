@@ -1,6 +1,7 @@
 import sys
 import time
 import random
+import base64
 
 from mqtt import *
 import google_ai as ai
@@ -8,8 +9,12 @@ from sim_uart import *
 
 AIO_FEED_ID = ["lab1-iot.nutnhan1","lab1-iot.nutnhan2"]
 AIO_USERNAME = "ShiroNeko"
-AIO_KEY = "aio_FotU35G1kvV7GpzbEwahTUrXzT3Y"
-# AIO_KEY = (base64.b64decode(AIO_KEY.encode("utf-8"))).decode("utf-8")
+
+#first encode the key so that adafruit dont change it automatically
+# key = (base64.b64encode(key.encode("utf-8"))).decode("utf-8")
+
+AIO_KEY = "YWlvX2ZDdXcxMFR4WEJVQnB4bEJRczNiSEdJcndra0Q="
+AIO_KEY = (base64.b64decode(AIO_KEY.encode("utf-8"))).decode("utf-8")
 
 
 #In this case,
